@@ -1,8 +1,10 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RealEstate.Core;
 using RealEstate.Core.Services;
+using RealEstate.Core.Services__Interfaces_;
 using RealEstate.Repository;
 using RealEstate.Service;
+using RealEstate.Services;
 using RealEstateAPI.Errors;
 using RealEstateAPI.Helpers;
 namespace RealEstateAPI.Extensions;
@@ -12,6 +14,8 @@ public static class ApplicationServicesExtension
     {
         Services.AddSingleton<IResponseCacheService, ResponseCacheService>();
         Services.AddScoped(typeof(IUnitOfWork), typeof(UnitOfWork));
+        Services.AddScoped(typeof(ISearchService), typeof(SearchService));
+
         Services.AddAutoMapper(typeof(MappingProfiles));
         Services.Configure<ApiBehaviorOptions>(Options =>
         {

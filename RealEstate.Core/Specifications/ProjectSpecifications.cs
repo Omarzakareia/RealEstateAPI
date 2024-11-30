@@ -23,4 +23,5 @@ public class ProjectSpecifications : BaseSpecification<Project>
         Includes.Add(l => l.ProjectImages);
         Includes.Add(l => l.ProjectType);
     }
+
 }

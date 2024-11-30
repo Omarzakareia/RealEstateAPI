@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\RealEstate.Core\RealEstate.Core.csproj" />
+    <ProjectReference Include="..\RealEstate.Repository\RealEstate.Repository.csproj" />
   </ItemGroup>
 
 </Project>
